@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100%;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.price-component {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 80vw;
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
+-moz-box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
+box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
+}
+
+.card {
+    background-color: white;
+    min-height: 17em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-content {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero {
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+    border-radius: 5px 5px;
+
+}
+
+.hero h1 {
+    color: #52c3c1;
+}
+
+.hero h2 {
+    color: #bfdf32;
+}
+
+.hero p {
+    color: #bec0ce;
+}
+
+.subscription {
+    background-color: #2bb3b1;
+}
+
+.subscription h1, h2, p{
+    color: white;
+}
+
+.subscription button {
+    background-color: #bfdf32;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1em;
+    -webkit-box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
+    -moz-box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
+    box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
+}
+
+.subscription button:hover {
+    background-color: #9fb929;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.why-us {
+    background-color: #4abebd;
+    color: white;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.why-us ul {
+    list-style: none;
+}
+
+
+/*  MEDIA QUERIES */ 
+
+@media (min-width: 1000px) {
+    .price-component {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
+        max-width: 850px;
+    }
+    .hero {
+        grid-column: 1 / -1;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+    .card-content {
+        padding: 30px;
+    }
+    .subscription button {
+        margin-top: 10px;
+        padding: 18px;
+    }
+  }
