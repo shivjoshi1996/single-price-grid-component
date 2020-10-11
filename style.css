@@ -1,10 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-size: 100%;
     font-family: 'Karla', sans-serif;
+    font-size: 16px;
 }
 
 body {
@@ -12,43 +20,67 @@ body {
 }
 
 h1 {
-    font-size: 1.3em;
+    padding-top:10px;
+    padding-bottom: 0px;
+    font-size: 1.2em;
+    padding-bottom: 10px;
 }
 
 h2 {
-    font-size: 1.2em;
+    padding-bottom: 0px;
+    font-size: 1.1em;
+    padding-bottom: 10px
 }
+
+p {
+    padding-bottom: 10px;
+}
+ul {
+    padding-bottom: 10px;
+}
+
 
 .wrapper {
     height: 100vh;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center; 
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
 }
 
 .price-component {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    max-width: 80vw;
+    max-width: 80%;
     -webkit-box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
--moz-box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
 box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
 }
 
 .card {
     background-color: white;
-    min-height: 17em;
     padding-left: 20px;
     padding-right: 20px;
+    height: 100%;
 }
 
 .card-content {
-    padding: 10px;
+    padding: 5px;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .hero {
@@ -81,18 +113,19 @@ box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
 .subscription button {
     background-color: #bfdf32;
     border: none;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     color: white;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1em;
     -webkit-box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
-    -moz-box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
     box-shadow: 2px 2px 30px -8px rgba(117,117,117,1);
 }
 
 .subscription button:hover {
     background-color: #9fb929;
+    -webkit-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
     cursor: pointer;
 }
@@ -112,15 +145,39 @@ box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
 
 @media (min-width: 1000px) {
     .price-component {
+        height: 600px;
+    }
+    .card {
+        height: 100%;
+    }
+    .price-component {
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1.2fr;
+        -ms-grid-rows: 1fr 1.2fr;
+        grid-template-rows: 1fr 1.3fr;
         max-width: 850px;
+    }
+    .price-component > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .price-component > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+    .price-component > *:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+    .price-component > *:nth-child(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
     }
     .hero {
         grid-column: 1 / -1;
     }
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     h2 {
         font-size: 1.5em;
