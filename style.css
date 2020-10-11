@@ -147,9 +147,6 @@ box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
     .price-component {
         height: 600px;
     }
-    .card {
-        height: 100%;
-    }
     .price-component {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -178,6 +175,7 @@ box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
     }
     h1 {
         font-size: 1.8em;
+        padding-bottom: 1.2em;
     }
     h2 {
         font-size: 1.5em;
@@ -185,11 +183,16 @@ box-shadow: 2px 2px 20px 0px rgba(191,191,191,1);
     p {
         font-size: 1.3em;
     }
+    li {
+        font-size: 1.3em;
+        opacity: 0.8;
+    }
     .card-content {
         padding: 30px;
     }
     .subscription button {
-        margin-top: 10px;
+        margin-top: 30px;
         padding: 18px;
+        font-size: 1.3em;
     }
   }
